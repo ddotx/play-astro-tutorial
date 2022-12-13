@@ -1,10 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+// import Navigation from '../components/Navigation.astro'
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
 const pageTitle = "Home Page";
 ---
+<!-- <Navigation /> -->
+<!-- <Header /> -->
 
-<Layout title="Welcome to Astro.">
+<BaseLayout>
+	<h2>My aewsome blog subtitle</h2>
+</BaseLayout>
+
+<!-- <Layout title="Welcome to Astro.">
 	<main>
 		<h1>Welcome to <span class="text-gradient">Astro Netlify</span></h1>
 		<p class="instructions">
@@ -34,7 +45,14 @@ const pageTitle = "Home Page";
 			/>
 		</ul>
 	</main>
-</Layout>
+</Layout> -->
+
+<!-- <Footer /> -->
+
+<script>
+import '../scripts/menu.js'
+</script>
+
 
 <style>
 	main {
