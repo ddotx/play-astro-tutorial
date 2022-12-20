@@ -21,6 +21,15 @@ h1 {
   font-size: 2.5rem;
 }
 
+.dark body {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
 /* nav styles */
 
 .hamburger {

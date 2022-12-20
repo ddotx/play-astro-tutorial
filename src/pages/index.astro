@@ -6,6 +6,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+
+// preact component
+import Greeting from "../components/Greeting.jsx";
+
 const pageTitle = "Home Page";
 ---
 <!-- <Navigation /> -->
@@ -13,6 +17,8 @@ const pageTitle = "Home Page";
 
 <BaseLayout>
 	<h2>My aewsome blog subtitle</h2>
+	<Greeting messages={["Hi", "Hello", "Howdy", "Hey there"]} />  // * non-hydrated component
+	<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} /> // * Rerun when the page loads (hydrated component)
 </BaseLayout>
 
 <!-- <Layout title="Welcome to Astro.">

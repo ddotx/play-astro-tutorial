@@ -3,7 +3,7 @@ import BlogPost from '../../components/BlogPost.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob('../posts/*.md');
+  const allPosts = await Astro.glob('../posts/*.md'); // ? Return an array of all posts
 
   // * Create an array of all tags
   const uniqueTags = [
@@ -21,8 +21,8 @@ export async function getStaticPaths() {
   return uniqueTags.map((tag) => {
     const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
     return {
-      params: { tag },
-      props: { posts: filteredPosts },
+      params: { tag }, // * -> to call each page route
+      props: { posts: filteredPosts }, // * -> to pass data to each page route
     };
   });
 }
